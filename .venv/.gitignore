@@ -1,0 +1,4 @@
+.venv/
+.toNotPush/
+*.py[cod]
+__pycache__/
