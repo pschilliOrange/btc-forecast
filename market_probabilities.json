@@ -1,0 +1,94 @@
+[
+  {
+    "market_slug": "will-bitcoin-dip-to-70k-in-april",
+    "expiration": "2025-05-01T03:59:00Z",
+    "option_type": "one-touch",
+    "probability": 0.01703560606559474,
+    "direction": "down-and-in",
+    "barrier": 70000
+  },
+  {
+    "market_slug": "will-bitcoin-reach-95k-in-april",
+    "expiration": "2025-05-01T03:59:00Z",
+    "option_type": "one-touch",
+    "probability": 0.49108362383339527,
+    "direction": "up-and-in",
+    "barrier": 95000
+  },
+  {
+    "market_slug": "will-bitcoin-reach-100k-in-april",
+    "expiration": "2025-05-01T03:59:00Z",
+    "option_type": "one-touch",
+    "probability": 0.17674308487396906,
+    "direction": "up-and-in",
+    "barrier": 100000
+  },
+  {
+    "market_slug": "will-the-price-of-bitcoin-be-between-79000-and-81000-on-apr-25",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.01349418882689069,
+    "lower": 79000,
+    "upper": 81000
+  },
+  {
+    "market_slug": "will-the-price-of-bitcoin-be-between-81000-and-83000-on-apr-25",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.019842209131226404,
+    "lower": 81000,
+    "upper": 83000
+  },
+  {
+    "market_slug": "will-the-price-of-bitcoin-be-greater-than-89000-on-apr-25",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.7151721796607391,
+    "lower": 89000
+  },
+  {
+    "market_slug": "will-the-price-of-bitcoin-be-less-than-79000-on-apr-25",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.018674739799985064,
+    "upper": 79000
+  },
+  {
+    "market_slug": "will-the-price-of-bitcoin-be-between-85000-and-87000-on-apr-25",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.07739478563298334,
+    "lower": 85000,
+    "upper": 87000
+  },
+  {
+    "market_slug": "will-the-price-of-bitcoin-be-between-87000-and-89000-on-apr-25",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.14069784184506678,
+    "lower": 87000,
+    "upper": 89000
+  },
+  {
+    "market_slug": "will-the-price-of-bitcoin-be-between-83000-and-85000-on-apr-25",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.029786941402947076,
+    "lower": 83000,
+    "upper": 85000
+  },
+  {
+    "market_slug": "bitcoin-above-85000-on-april-25",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.935,
+    "lower": 85000
+  },
+  {
+    "market_slug": "bitcoin-up-or-down-in-april",
+    "expiration": "2025-04-25T16:00:00Z",
+    "option_type": "binary",
+    "probability": 0.8899999999999999,
+    "lower": 82914
+  }
+]

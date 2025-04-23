@@ -1,0 +1,5 @@
+.venv/
+.toNotPush/
+.htmlNotToPushYest/
+*.py[cod]
+__pycache__/

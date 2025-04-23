@@ -1,0 +1,257 @@
+[
+  {
+    "condition_id": "0xc9501eac519c7b631d0425ea093a127f4552ad52b8fdf4e591cea89b31aad981",
+    "question_id": "0x5e42b46ddee06a71406058cb99dfd123334ff0101914fde7f7d044468032415c",
+    "description": "This market will immediately resolve to \"Yes\" if any Binance 1 minute candle for Bitcoin (BTCUSDT) between April 1, 2025, 00:00 and April 30, 2025, 23:59 in the ET timezone has a final \"Low\" price of $70,000 or lower. Otherwise, this market will resolve to \"No.\"\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Low\" prices available at https://www.binance.com/en/trade/BTC_USDT, with the chart settings on \"1m\" for one-minute candles selected on the top bar.\n\nPlease note that the outcome of this market depends solely on the price data from the Binance BTCUSDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",
+    "category": null,
+    "market_slug": "will-bitcoin-dip-to-70k-in-april",
+    "tokens": [
+      {
+        "token_id": "40327433085184331887594157486694635751889799113916680824117843679130968900140",
+        "outcome": "Yes",
+        "price": 0.0445,
+        "winner": false
+      },
+      {
+        "token_id": "46074511378568873825628007516555394193327796737900751799106698203625907384053",
+        "outcome": "No",
+        "price": 0.9555,
+        "winner": false
+      }
+    ],
+    "minimum_tick_size": 0.001,
+    "active": true,
+    "closed": false,
+    "end_date_iso": "2025-04-30T00:00:00Z"
+  },
+  {
+    "condition_id": "0x9d84821a6c8b45fcd9dad9f50f1b0fc6cb76de7a68d7686bfefba697c32a6375",
+    "question_id": "0x6d1c56a18894833ddb876dde83ac4e3871522e06397e6f90f8e3019455a46e5f",
+    "description": "This market will immediately resolve to \"Yes\" if any Binance 1 minute candle for Bitcoin (BTCUSDT) between April 1, 2025, 00:00 and April 30, 2025, 23:59 in the ET timezone has a final \"High\" price of $95,000 or higher. Otherwise, this market will resolve to \"No.\"\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"High\" prices available at https://www.binance.com/en/trade/BTC_USDT, with the chart settings on \"1m\" for one-minute candles selected on the top bar.\n\nPlease note that the outcome of this market depends solely on the price data from the Binance BTCUSDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",
+    "category": null,
+    "market_slug": "will-bitcoin-reach-95k-in-april",
+    "tokens": [
+      {
+        "token_id": "113733303390103764159442829422332472444843638571953553342010572782499227977688",
+        "outcome": "Yes",
+        "price": 0.125,
+        "winner": false
+      },
+      {
+        "token_id": "63580689056305536048863052547924937121791141239998704107552406492946329546681",
+        "outcome": "No",
+        "price": 0.875,
+        "winner": false
+      }
+    ],
+    "minimum_tick_size": 0.01,
+    "active": true,
+    "closed": false,
+    "end_date_iso": "2025-04-30T00:00:00Z"
+  },
+  {
+    "condition_id": "0x7a18e4d613d7bf6afa06aa9eb1f9287ca81e841d77ae6d5fabdab37f0c0b5d6c",
+    "question_id": "0xbbd57a44214bbb083a7b0f0f58d9f2e18bb0cfd32f74da9bf5876077ecb10027",
+    "description": "This market will immediately resolve to \"Yes\" if any Binance 1 minute candle for Bitcoin (BTCUSDT) between April 1, 2025, 00:00 and April 30, 2025, 23:59 in the ET timezone has a final \"High\" price of $100,000 or higher. Otherwise, this market will resolve to \"No.\"\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"High\" prices available at https://www.binance.com/en/trade/BTC_USDT, with the chart settings on \"1m\" for one-minute candles selected on the top bar.\n\nPlease note that the outcome of this market depends solely on the price data from the Binance BTCUSDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",
+    "category": null,
+    "market_slug": "will-bitcoin-reach-100k-in-april",
+    "tokens": [
+      {
+        "token_id": "57798819323817029409567254351342206694466587025755225164724763801594674674042",
+        "outcome": "Yes",
+        "price": 0.035,
+        "winner": false
+      },
+      {
+        "token_id": "70420530247609575824258402486557627751198361004051609640733948499826801660965",
+        "outcome": "No",
+        "price": 0.965,
+        "winner": false
+      }
+    ],
+    "minimum_tick_size": 0.001,
+    "active": true,
+    "closed": false,
+    "end_date_iso": "2025-04-30T00:00:00Z"
+  },
+  {
+    "condition_id": "0x5cf3889ba2db33e6ad0f01b06e3307c0f4aff17cb919c2f66a3d777ad5ed1bfc",
+    "description": "This market will resolve according to the final \"Close\" price of the Binance 1 minute candle for BTCUSDT 25 Apr '25 12:00 in the ET timezone (noon). Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "will-the-price-of-bitcoin-be-between-79000-and-81000-on-apr-25",
+    "tokens": [
+      {
+        "token_id": "49497260472964887790663764673210081640300903747182060839493266729181487485324",
+        "outcome": "Yes",
+        "price": 0.085,
+        "winner": false
+      },
+      {
+        "token_id": "73347969470212821525007611313314698225547966388654607892846143495735795293805",
+        "outcome": "No",
+        "price": 0.915,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-25T00:00:00Z"
+  },
+  {
+    "condition_id": "0x29bd50a4a859deea3eb0397ca7c78bbd70c889ffe7190bc0c5f264bbc966e09d",
+    "description": "This market will resolve according to the final \"Close\" price of the Binance 1 minute candle for BTCUSDT 25 Apr '25 12:00 in the ET timezone (noon). Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "will-the-price-of-bitcoin-be-between-81000-and-83000-on-apr-25",
+    "tokens": [
+      {
+        "token_id": "8737958694222937093966827513217415504529164652631414421692407265582620246253",
+        "outcome": "Yes",
+        "price": 0.145,
+        "winner": false
+      },
+      {
+        "token_id": "68581751680348469765939134819581488697387874461597020770616910578258859774165",
+        "outcome": "No",
+        "price": 0.855,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-25T00:00:00Z"
+  },
+  {
+    "condition_id": "0x396cff35d0089be0dd7a31c3dd8893dba91087cb204f36fd596ea8e176c8194f",
+    "description": "This market will resolve according to the final \"Close\" price of the Binance 1 minute candle for BTCUSDT 25 Apr '25 12:00 in the ET timezone (noon). Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "will-the-price-of-bitcoin-be-greater-than-89000-on-apr-25",
+    "tokens": [
+      {
+        "token_id": "56301394996158099288337148092833602815489233233695788581935629307696915237267",
+        "outcome": "Yes",
+        "price": 0.19,
+        "winner": false
+      },
+      {
+        "token_id": "24020800886044361928297303482313439338060103716147186009149855318565271604084",
+        "outcome": "No",
+        "price": 0.81,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-25T00:00:00Z"
+  },
+  {
+    "condition_id": "0x22875ec51d38b3f9ffd35f491af3acf1afc8ecca64726b15042d6fc3818e6e49",
+    "description": "This market will resolve according to the final \"Close\" price of the Binance 1 minute candle for BTCUSDT 25 Apr '25 12:00 in the ET timezone (noon). Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "will-the-price-of-bitcoin-be-less-than-79000-on-apr-25",
+    "tokens": [
+      {
+        "token_id": "29797281523447407616127294229355536802467226982911921166342698822824802357677",
+        "outcome": "Yes",
+        "price": 0.085,
+        "winner": false
+      },
+      {
+        "token_id": "70231352399705078851853547295041784563857421832309241406215013753930449336229",
+        "outcome": "No",
+        "price": 0.915,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-25T00:00:00Z"
+  },
+  {
+    "condition_id": "0xe4bc37b970c93fedddf312d7023d3174f74128b1f0c9d9ff65aa60df2635b5fe",
+    "description": "This market will resolve according to the final \"Close\" price of the Binance 1 minute candle for BTCUSDT 25 Apr '25 12:00 in the ET timezone (noon). Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "will-the-price-of-bitcoin-be-between-85000-and-87000-on-apr-25",
+    "tokens": [
+      {
+        "token_id": "25263356052441339326117715423605790137751361344058878484278733550398406284259",
+        "outcome": "Yes",
+        "price": 0.195,
+        "winner": false
+      },
+      {
+        "token_id": "73568711174644287958933212971565150421172426721888368276512178692945337029041",
+        "outcome": "No",
+        "price": 0.805,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-25T00:00:00Z"
+  },
+  {
+    "condition_id": "0xd107dc62f773160d2529d4c44e7778e85888f80da260a44b8f6e9b9013000074",
+    "description": "This market will resolve according to the final \"Close\" price of the Binance 1 minute candle for BTCUSDT 25 Apr '25 12:00 in the ET timezone (noon). Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "will-the-price-of-bitcoin-be-between-87000-and-89000-on-apr-25",
+    "tokens": [
+      {
+        "token_id": "56277317448654966249803184010250374711761646267480376585623804142282121374298",
+        "outcome": "Yes",
+        "price": 0.15,
+        "winner": false
+      },
+      {
+        "token_id": "22951323527745117108500012375460734314494492843939358309150370366480067885661",
+        "outcome": "No",
+        "price": 0.85,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-25T00:00:00Z"
+  },
+  {
+    "condition_id": "0xe9c80bf92523fd7b5b29ff443e511133cc5a2d6c670f86269df341abd43ce2b1",
+    "description": "This market will resolve according to the final \"Close\" price of the Binance 1 minute candle for BTCUSDT 25 Apr '25 12:00 in the ET timezone (noon). Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "will-the-price-of-bitcoin-be-between-83000-and-85000-on-apr-25",
+    "tokens": [
+      {
+        "token_id": "102570323353652645212572638429138770466388742135805394080992273251444282787480",
+        "outcome": "Yes",
+        "price": 0.19,
+        "winner": false
+      },
+      {
+        "token_id": "43789024857573281101513598890434676119854053404029238403450566509429950145017",
+        "outcome": "No",
+        "price": 0.81,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-25T00:00:00Z"
+  },
+  {
+    "condition_id": "0xdc053d686527e7170cc59d65caaa2728e2f502afbab282dc1d156b57ad45172f",
+    "description": "This market will resolve to \"Yes\" if the Binance 1 minute candle for BTCUSDT 25 Apr '25 12:00 in the ET timezone (noon) has a final \u201cClose\u201d price of 85,000.01 or higher. Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \u201c1m\u201d and \u201cCandles\u201d selected on the top bar.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "bitcoin-above-85000-on-april-25",
+    "tokens": [
+      {
+        "token_id": "2249684530916699116178541484263059979127552019330079314837222061892654460746",
+        "outcome": "Yes",
+        "price": 0.53,
+        "winner": false
+      },
+      {
+        "token_id": "68272825439490307622117706209002345144282382843931007336318214409086698161660",
+        "outcome": "No",
+        "price": 0.47,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-25T00:00:00Z"
+  },
+  {
+    "condition_id": "0x7b60a13c3713128c69b42de6442790c42be615ae80c53a7ea1eb8d0c50bee79a",
+    "description": "This market will resolve to \"Up\" if the \"Close\" price for the Binance 1 minute candle for BTCUSDT 01 Apr '25 00:00 in the ET timezone is lower than the final \"Close\" price for the 30 Apr '25 23:59 ET candle.\nThis market will resolve to \"Down\" if the \"Close\" price for the Binance 1 minute candle for BTCUSDT 01 Apr '25 00:00 in the ET timezone is higher than the final \"Close\" price for the 30 Apr '25 23:59 ET candle.\nIf the final \"Close\" price for both of these candles is exactly equal on Binance, this market will resolve 50-50.\n\nThe resolution source for this market is Binance, specifically the BTCUSDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \u201c1m\u201d and \u201cCandles\u201d selected on the top bar.\n\nPlease note that this market is about the price according to Binance BTCUSDT, not according to other sources or spot markets.",
+    "market_slug": "bitcoin-up-or-down-in-april",
+    "tokens": [
+      {
+        "token_id": "18189816991037274581982305435092519597134223243673954898137051674580569659345",
+        "outcome": "Yes",
+        "price": 0.65,
+        "winner": false
+      },
+      {
+        "token_id": "97584653799487044229478440227810155495718812491639876915653500775761449518078",
+        "outcome": "No",
+        "price": 0.35,
+        "winner": false
+      }
+    ],
+    "end_date_iso": "2025-04-30T00:00:00Z"
+  }
+]
