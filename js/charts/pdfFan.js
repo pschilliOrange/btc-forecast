@@ -25,5 +25,9 @@ export function renderPdfFan(containerId, { priceGrid, series, title }) {
         plot_bgcolor: "rgba(0,0,0,0)",
     };
 
-    Plotly.newPlot(containerId, traces, layout, { responsive: true });
+    Plotly.newPlot(containerId, traces, layout, {
+      responsive: true,
+      useResizeHandler: true,
+      style: {width: '100%', height: '100%'}
+    });
 }

@@ -1,19 +1,32 @@
 
-<div class="model-info card" id="model-info"></div>
-<div class="card" id="heatmap"></div>
-<div class="card" id="pdf-fan"></div>
-<div class="card table-container">
-    <div id="contract-table"></div>
-    <div id="diagnostics"></div>
+<div class="grid-container">
+    <div class="model-info card" id="model-info"></div>
+    <div class="card plot-container" id="heatmap"></div>
+    <div class="card plot-container" id="pdf-fan"></div>
+    <div class="card table-container">
+        <div id="contract-table"></div>
+        <div id="diagnostics"></div>
+    </div>
 </div>
 
 <style>
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+}
+
 .card {
     background: white;
     padding: 1rem;
     border-radius: 8px;
-    margin-bottom: 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.plot-container {
+    min-height: 400px;
 }
 
 .table-container {
