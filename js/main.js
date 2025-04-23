@@ -31,11 +31,8 @@ function initTabs() {
 }
 
 // --------- bootstrap --------------------------------------------------------
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", async () => {
   initTabs();
-  GBM.init().catch(err => {
-    console.error(err);
-    const hm = document.getElementById("heatmap");
-    hm.innerHTML = `<p style="color:#ff5555;padding:1rem">${err.message}</p>`;
-  });
+  // Load the initial GBM content
+  await loadContent('gbm');
 });
