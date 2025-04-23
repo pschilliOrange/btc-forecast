@@ -1,0 +1,5 @@
+modules = ["python-3.12", "c-clang14", "cpp-clang14", "nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["libxcrypt", "pkg-config", "xsimd"]
