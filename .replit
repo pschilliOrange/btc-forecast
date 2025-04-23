@@ -3,3 +3,15 @@ modules = ["python-3.12", "c-clang14", "cpp-clang14", "nodejs-20"]
 [nix]
 channel = "stable-24_05"
 packages = ["libxcrypt", "pkg-config", "xsimd"]
+
+[workflows]
+runButton = "Run Website"
+
+[[workflows.workflow]]
+name = "Run Website"
+author = 41856394
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m http.server 5000"
