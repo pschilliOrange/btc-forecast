@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,34 +38,6 @@
         section.active {
             display: block;
         }
-        .model-info {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        #heatmap, #pdf-fan {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        #diagnostics table {
-            width: 100%;
-            background: white;
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        th, td {
-            padding: 0.5rem;
-            text-align: left;
-        }
-        thead {
-            background: #f0f0f0;
-        }
     </style>
 </head>
 <body>
@@ -74,12 +45,10 @@
         <button data-target="gbm" class="active">Geometric Brownian Motion</button>
         <button data-target="about">About</button>
     </nav>
-    <main>
+    <main id="content">
+        <!-- Content will be loaded here -->
         <section id="gbm" class="active">
-            <div id="model-info" class="model-info"></div>
-            <div id="heatmap"></div>
-            <div id="pdf-fan"></div>
-            <div id="diagnostics"></div>
+            
         </section>
         <section id="about">
             <h1>About Bitcoin Price Modeling</h1>

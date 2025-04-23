@@ -4,22 +4,28 @@
 import * as GBM from "./models/GBM.js";
 
 // --------- tab navigation ---------------------------------------------------
+async function loadContent(page) {
+  const content = document.getElementById('content');
+  try {
+    const response = await fetch(`pages/${page}.html`);
+    content.innerHTML = await response.text();
+    if (page === 'gbm') {
+      await GBM.init();
+    }
+  } catch (err) {
+    console.error(err);
+    content.innerHTML = `<p style="color:#ff5555;padding:1rem">Error loading ${page}</p>`;
+  }
+}
+
 function initTabs() {
   const buttons = document.querySelectorAll("nav button[data-target]");
 
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-      // visual state
       buttons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-
-      const targetId = btn.dataset.target;
-      document.querySelectorAll("main section").forEach(sec => {
-        sec.classList.toggle("active", sec.id === targetId);
-      });
-
-      // let model module handle any resize housekeeping
-      if (targetId === "gbm") GBM.resize();
+      loadContent(btn.dataset.target);
     });
   });
 }
