@@ -68,7 +68,6 @@
 #   • Calibrated (μ̂, σ̂) in annualised units (μ ≈ drift, σ ≈ vol).
 #   • A per‑contract line:  model P, market P, absolute error.
 
-numIntervals = 100
 
 
 import json
@@ -100,7 +99,7 @@ def _common_terms(S0, T, mu, sigma):
 
 def prob_touch(S0, H, T, mu, sigma):
     if T <= 0:
-        return 0.0
+        raise ValueError("Expired contract where it should have been filtered out.")
     m = mu - 0.5 * sigma**2
     v = sigma * sqrt(T)
     alpha = mu / sigma**2 - 0.5
@@ -119,7 +118,7 @@ def prob_touch(S0, H, T, mu, sigma):
 
 def prob_above(S0, K, T, mu, sigma):
     if T <= 0:
-        return 1.0 if S0 > K else 0.0
+        raise ValueError("Expired contract where it should have been filtered out.")
     m, v = _common_terms(S0, T, mu, sigma)
     d = (log(K / S0) - m * T) / v
     return 1.0 - norm.cdf(d)
@@ -132,6 +131,8 @@ def prob_below(S0, K, T, mu, sigma):
 def prob_range(S0, A, B, T, mu, sigma):
     if A >= B:
         raise ValueError("Range digital requires A < B")
+    if T <= 0:
+        raise ValueError("Expired contract where it should have been filtered out.")
     m, v = _common_terms(S0, T, mu, sigma)
     u = (log(B / S0) - m * T) / v
     l = (log(A / S0) - m * T) / v
@@ -198,6 +199,7 @@ def fit_gbm_and_export(
                 raise ValueError(f"Binary '{slug}' missing strike info")
         else:
             raise ValueError(f"Unknown option_type '{mkt['option_type']}'")
+    
 
     P_market = np.asarray(P_market)
 
@@ -210,7 +212,18 @@ def fit_gbm_and_export(
     # ---- least squares ----------------------------------------------------
     x0 = np.array([0.0, log(0.65)])
     bnds = ([-np.inf, log(0.01)], [np.inf, log(4.0)])
-    res = least_squares(_residuals, x0, bounds=bnds, xtol=1e-12, ftol=1e-12)
+    res = least_squares(
+        _residuals,
+        x0,
+        bounds=bnds,
+        method="trf",               # or “dogbox”
+        xtol=1e-14,                 # tighten step‐size tolerance
+        ftol=1e-14,                 # tighten cost tolerance
+        gtol=1e-14,                 # tighten gradient tolerance
+        max_nfev=20000,             # bump up max function calls
+        verbose=2,                  # print iteration logs
+    )
+
 
     mu_hat, sigma_hat = res.x[0], exp(res.x[1])
 
@@ -284,6 +297,7 @@ if __name__ == "__main__":
     import sys, pprint
     from datetime import datetime, timezone
     import json
+    numIntervals = 30
 
     mkt_file = sys.argv[1] if len(sys.argv) > 1 else "market_probabilities.json"
     px_file  = sys.argv[2] if len(sys.argv) > 2 else "btc_price.json"
@@ -303,11 +317,11 @@ if __name__ == "__main__":
 
     # split into numIntervals equal intervals
     pdf_timestamps = [
-        (start + (latest - start) * i/numIntervals)
+        (start + (latest - start) * i/(numIntervals))
             .astimezone(timezone.utc)
             .isoformat()
             .replace("+00:00", "Z")
-        for i in range(1, 11)
+        for i in range(1, numIntervals+1)
     ]
 
     result = fit_gbm_and_export(

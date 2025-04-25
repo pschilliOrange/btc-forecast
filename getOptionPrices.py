@@ -13,41 +13,35 @@ EVENT_CONFIG = {
         "2026-01-01T04:59:00Z",
         "one-touch"
     ),
-    "bitcoin-price-on-april-25": (
-        "2025-04-25T16:00:00Z",
-        "binary"
-    ),
-    "bitcoin-above-85000-on-april-25": (
-        "2025-04-25T16:00:00Z",
-        "binary"
-    ),
     "bitcoin-up-or-down-in-april": (
-        "2025-04-25T16:00:00Z",
+        "2025-05-01T03:59:00Z",
+        "binary"
+    ),
+    "bitcoin-price-on-may-2": (
+        "2025-05-02T16:00:00Z",
         "binary"
     )
 }
 
 # Map price-slug to its parameters (now including direction for one‑touchs)
 PRICE_CONFIG = {
-    # one‑touch markets
+    # one-touch markets
     "will-bitcoin-dip-to-70k-in-april":      { "direction": "down-and-in",   "barrier": 70000 },
-    "will-bitcoin-reach-90k-in-april":       { "direction": "up-and-in",     "barrier": 90000 },
-    "will-bitcoin-reach-95k-in-april":       { "direction": "up-and-in",     "barrier": 95000 },
     "will-bitcoin-reach-100k-in-april":      { "direction": "up-and-in",     "barrier": 100000 },
 
-    # binary markets (single if only one bound, range if both)
-    "will-the-price-of-bitcoin-be-less-than-79000-on-apr-25":   { "upper": 79000 },
-    "will-the-price-of-bitcoin-be-greater-than-89000-on-apr-25": { "lower": 89000 },
-    "will-the-price-of-bitcoin-be-between-79000-and-81000-on-apr-25": { "lower": 79000, "upper": 81000 },
-    "will-the-price-of-bitcoin-be-between-81000-and-83000-on-apr-25": { "lower": 81000, "upper": 83000 },
-    "will-the-price-of-bitcoin-be-between-83000-and-85000-on-apr-25": { "lower": 83000, "upper": 85000 },
-    "will-the-price-of-bitcoin-be-between-85000-and-87000-on-apr-25": { "lower": 85000, "upper": 87000 },
-    "will-the-price-of-bitcoin-be-between-87000-and-89000-on-apr-25": { "lower": 87000, "upper": 89000 },
 
-    # these two already exist in PRICE_CONFIG but shown here for clarity
-    "bitcoin-above-85000-on-april-25":        { "lower": 85000 },
     "bitcoin-up-or-down-in-april":            { "lower": 82914 },
+
+    # binary markets (single if only one bound, range if both) — May 2
+    "will-the-price-of-bitcoin-be-less-than-88000-on-may-2":           { "upper": 88000 },
+    "will-the-price-of-bitcoin-be-between-88000-and-90000-on-may-2":  { "lower": 88000, "upper": 90000 },
+    "will-the-price-of-bitcoin-be-between-90000-and-92000-on-may-2":  { "lower": 90000, "upper": 92000 },
+    "will-the-price-of-bitcoin-be-between-92000-and-94000-on-may-2":  { "lower": 92000, "upper": 94000 },
+    "will-the-price-of-bitcoin-be-between-94000-and-96000-on-may-2":  { "lower": 94000, "upper": 96000 },
+    "will-the-price-of-bitcoin-be-between-96000-and-98000-on-may-2":  { "lower": 96000, "upper": 98000 },
+    "will-the-price-of-bitcoin-be-greater-than-98000-on-may-2":        { "lower": 98000 },
 }
+
 
 
 
@@ -56,7 +50,7 @@ CLOB_ENDPOINT = "https://clob.polymarket.com"
 GAMMA_ENDPOINT = "https://gamma-api.polymarket.com"
 
 # How many US dollars we're simulating a market order for
-SLIPPAGE_USD = 1000.0
+SLIPPAGE_USD = 750.0
 
 def simulate_market_buy(asks, usd_amount):
     """
@@ -185,7 +179,8 @@ def get_option_prices():
             events = gm.get("events") or []
             if isinstance(events, list) and events:
                 ev = events[0]
-                event_slug = ev.get("slug") or ev.get("name", "").lower().replace(' ', '-')
+                event_slug = ev.get("slug") or ev.get("name", "").lower().replace(' ', '-') 
+ ##                 print(event_slug)
             else:
                 event_slug = None
         else:
